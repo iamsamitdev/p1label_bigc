@@ -10,6 +10,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2 # สำหรับ Icon บน iOS
   shared_preferences: ^2.0.15 # สำหรับเก็บข้อมูล local storage บน android/ios
+  esc_pos_printer: ^4.1.0 # สำหรับ Wifi printer
 
 dev_dependencies:
   flutter_test:

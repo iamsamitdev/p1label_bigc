@@ -8,7 +8,8 @@ var initURL;
 
 void main() {
 
-  initURL = '/branchcode';
+  // initURL = '/branchcode';
+  initURL = '/physicalkey';
 
   runApp(MyApp());
 

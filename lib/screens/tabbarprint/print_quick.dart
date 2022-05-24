@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:p1label/components/elevated_full_button.dart';
 import 'package:p1label/screens/tabbarprint/data_print_quick.dart';
 import 'package:p1label/themes/colors.dart';
@@ -13,8 +14,29 @@ class PrintQuickScreen extends StatefulWidget {
 }
 
 class _PrintQuickScreenState extends State<PrintQuickScreen> {
+  
   bool ckSF = false;
   bool ckBS = true;
+
+  final FocusNode _focusNode = FocusNode();
+  String? _message;
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  void _handleKeyEvent(RawKeyEvent event) {
+    setState(() {
+      if (event.physicalKey == PhysicalKeyboardKey.keyA) {
+        _message = 'Pressed the key next to CAPS LOCK!';
+      } else {
+        _message = 'Wrong key.';
+      }
+      print(_message);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +89,7 @@ class _PrintQuickScreenState extends State<PrintQuickScreen> {
                     onPressed: (){
                       if (kDebugMode) {
                         print('Setting');
+                        // _handleKeyEvent();
                       }
                     },
                   ),

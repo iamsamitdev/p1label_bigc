@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:p1label/components/IAppBar.dart';
 import 'package:p1label/components/form_helper.dart';
 import 'package:p1label/components/widgets.dart';
-import 'package:p1label/themes/colors.dart';
 
 class BranchCodeScreen extends StatefulWidget {
   BranchCodeScreen({Key? key}) : super(key: key);
